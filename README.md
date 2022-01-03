@@ -21,6 +21,18 @@ Run `npm run start` to start the live server locally.
 
 Please give this repo a ⭐ if you found it useful! Thanks
 
+## Fork
+
+You should fork this repo if you would like to use it.
+
+If you decide to clone this repo, don't forget to change your Git remote URL:<br>
+Here's a quick [How-To](https://devconnected.com/how-to-change-git-remote-origin/) guide.
+
+```
+git remote set-url origin <your-remote_url>
+git remote -v
+```
+
 ## Contact
 
 🐦 Twitter: [@melwyntee](https://twitter.com/melwyntee)<br>
