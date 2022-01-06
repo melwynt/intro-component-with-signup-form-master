@@ -1,7 +1,7 @@
 {
-  "name": "html-sass-boilerplate",
+  "name": "intro-component-with-signup-form-master",
   "version": "1.0.0",
-  "description": "Simple HTML SASS Boilerplate",
+  "description": "Frontend Mentor - Intro component with sign up form solution",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
