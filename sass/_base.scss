@@ -16,6 +16,11 @@
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 
     --line: 1px solid var(--color-grey-light-2);
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --top-box: #5D54A3;
 }
 
 * {
@@ -35,11 +40,29 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--color-grey-dark-2);
 
+    background: var(--red);
+    background-image: url(../img/bg-intro-desktop.png);
     min-height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    margin-top: 8rem;
+
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 111rem;
+    align-items: flex-start;
 }

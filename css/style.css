@@ -11,7 +11,11 @@
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
   --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
-  --line: 1px solid var(--color-grey-light-2); }
+  --line: 1px solid var(--color-grey-light-2);
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --top-box: #5D54A3; }
 
 * {
   margin: 0;
@@ -27,9 +31,142 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--color-grey-dark-2);
+  background: var(--red);
+  background-image: url(../img/bg-intro-desktop.png);
   min-height: 100vh; }
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8rem;
+  height: 100vh; }
+
+.container {
+  display: flex;
+  width: 111rem;
+  align-items: flex-start; }
+
+.left-panel, .right-panel {
+  min-height: 55.8rem; }
+
+.left-panel {
+  width: 49.8rem;
+  margin-right: auto;
+  padding-top: 17.4rem; }
+  .left-panel__title {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 5.5rem;
+    word-spacing: -.3rem;
+    color: white; }
+  .left-panel__description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    line-height: 2.6rem;
+    margin-top: 2.9rem;
+    word-spacing: 0rem;
+    text-align: left;
+    opacity: 0.9; }
+
+.right-panel {
+  width: 54rem; }
+  .right-panel__top-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background: var(--top-box);
+    border-radius: 1rem;
+    height: 6rem;
+    padding-top: .3rem; }
+    .right-panel__top-box span {
+      font-weight: 400;
+      opacity: .9; }
+  .right-panel__form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 2.4rem;
+    border-radius: 1rem;
+    padding: 4rem 4rem 3rem 4rem; }
+    .right-panel__form__section {
+      position: relative;
+      height: 5.6rem;
+      margin-bottom: 2rem; }
+      .right-panel__form__section__input {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-grey-dark-3);
+        padding: 0 3rem;
+        outline: none;
+        border-radius: .5rem;
+        border: 1px solid var(--color-grey-light-3); }
+        .right-panel__form__section__input:focus {
+          border: 1px solid var(--blue);
+          caret-color: var(--blue); }
+        .right-panel__form__section__input:focus + .right-panel__form__section__label .right-panel__form__section__label__content,
+        .right-panel__form__section__input:valid + .right-panel__form__section__label .right-panel__form__section__label__content {
+          visibility: hidden; }
+      .right-panel__form__section__input.error {
+        border: 2px solid var(--red);
+        color: var(--red); }
+      .right-panel__form__section__label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0; }
+      .right-panel__form__section__label {
+        pointer-events: none; }
+        .right-panel__form__section__label__content {
+          position: absolute;
+          top: 1.8rem;
+          left: 3rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: var(--color-grey-dark-3); }
+      .right-panel__form__section__icon-error {
+        position: absolute;
+        bottom: 1rem;
+        right: 2.7rem; }
+    .right-panel__form__btn {
+      background: var(--green);
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 600;
+      height: 5.6rem;
+      border: none;
+      border-radius: .5rem;
+      padding-top: .2rem;
+      letter-spacing: 0.1rem; }
+    .right-panel__form__terms {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--color-grey-dark-3);
+      height: 4.4rem; }
+      .right-panel__form__terms span {
+        color: var(--red);
+        font-weight: 600; }
+    .right-panel__form .message-error {
+      text-align: right;
+      font-size: 1.1rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--red);
+      margin-top: -1.5rem;
+      padding-bottom: 1.9rem;
+      padding-right: .2rem; }

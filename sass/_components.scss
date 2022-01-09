@@ -1,0 +1,163 @@
+.left-panel, .right-panel {
+    min-height: 55.8rem;
+}
+.left-panel {
+    width: 49.8rem;
+    margin-right: auto;
+    padding-top: 17.4rem;
+
+    &__title {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 5.5rem;
+        word-spacing: -.3rem;
+        color: white;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: white;
+        line-height: 2.6rem;
+        margin-top: 2.9rem;
+        word-spacing: 0rem;
+        text-align: left;
+        opacity: 0.9;
+    }
+}
+
+.right-panel {
+    width: 54rem;
+
+    &__top-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        background: var(--top-box);
+        border-radius: 1rem;
+        height: 6rem;
+        padding-top: .3rem;
+
+        span {
+            font-weight: 400;
+            opacity: .9;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        background: white;
+        margin-top: 2.4rem;
+        border-radius: 1rem;
+
+        padding: 4rem 4rem 3rem 4rem;
+
+        &__section {
+            position: relative;
+            height: 5.6rem;
+            margin-bottom: 2rem;
+
+            &__input {
+                width: 100%;
+                // height: 5.6rem;
+                height: 100%;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--color-grey-dark-3);
+
+                padding: 0 3rem;
+                // margin-bottom: 2rem;
+                outline: none;
+                border-radius: .5rem;
+                border: 1px solid var(--color-grey-light-3);
+
+                &:focus {
+                    border: 1px solid var(--blue);
+                    caret-color: var(--blue);
+                }
+                &:focus + .right-panel__form__section__label .right-panel__form__section__label__content,
+                &:valid + .right-panel__form__section__label .right-panel__form__section__label__content {
+                    visibility: hidden;
+                }
+            }
+
+            &__input.error {
+                border: 2px solid var(--red);
+                color: var(--red);
+            }
+            
+            &__label {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                left: 0;
+            }
+
+            &__label {
+                pointer-events: none;
+
+                &__content {
+                    position: absolute;
+                    top: 1.8rem;
+                    left: 3rem;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: var(--color-grey-dark-3);
+                }
+            }
+
+            &__icon-error {
+                position: absolute;
+                bottom: 1rem;
+                right: 2.7rem;
+            }
+        }
+
+        &__btn {
+            background: var(--green);
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;
+            height: 5.6rem;
+            border: none;
+            border-radius: .5rem;
+            padding-top: .2rem;
+            letter-spacing: 0.1rem;
+        }
+        &__terms {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--color-grey-dark-3);
+
+            height: 4.4rem;
+
+            span {
+                color: var(--red);
+                font-weight: 600;
+            }
+        }
+
+        .message-error {
+            text-align: right;
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--red);
+
+            margin-top: -1.5rem;
+            padding-bottom: 1.9rem;
+            padding-right: .2rem;
+        }
+    }
+}
