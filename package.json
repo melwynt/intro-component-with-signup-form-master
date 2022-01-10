@@ -2,25 +2,23 @@
   "name": "intro-component-with-signup-form-master",
   "version": "1.0.0",
   "description": "Frontend Mentor - Intro component with sign up form solution",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "start": "parcel src/index.html --port 1234 --hmr-port 4326 --host localhost",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.4.1",
-    "concat": "^1.0.3",
-    "node-sass": "^7.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0"
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
