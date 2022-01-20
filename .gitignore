@@ -4,5 +4,7 @@
 # dependencies
 /node_modules
 
-# parcel cache
+# parcel
 .parcel-cache
+/public
+/dist

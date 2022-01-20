@@ -2,10 +2,9 @@
   "name": "intro-component-with-signup-form-master",
   "version": "1.0.0",
   "description": "Frontend Mentor - Intro component with sign up form solution",
-  "source": "index.html",
   "scripts": {
-    "start": "parcel src/index.html --port 1234 --hmr-port 4326 --host localhost",
-    "build": "parcel build src/index.html"
+    "start": "rm -rf public/* && parcel src/index.html --dist-dir public --port 1234 --hmr-port 4326 --host localhost --open",
+    "build": "rm -rf public/* && parcel build src/index.html --dist-dir public"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +13,7 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.1.1",
-    "parcel": "^2.1.1"
+    "parcel": "latest"
   },
   "dependencies": {
     "react": "^17.0.2",
