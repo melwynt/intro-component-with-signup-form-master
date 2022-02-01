@@ -41,7 +41,7 @@ const App = () => {
           <div className="right-panel__top-box">
             Try it free 7 days&nbsp;<span>then $20/mo. thereafter</span>
           </div>
-          <form className="right-panel__form" onSubmit={submit}>
+          <form className="right-panel__form" onSubmit={submit} noValidate>
             <div className="right-panel__form__section">
               <input
                 type="text"
@@ -50,8 +50,7 @@ const App = () => {
                   errorFirstname ? 'error' : ''
                 }`}
                 autoComplete="off"
-                // required
-                placeholder="First Name"
+                required
                 onChange={(e) => setFirstname(e.target.value)}
               />
               <label
@@ -59,7 +58,7 @@ const App = () => {
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
-                  First Name
+                  {errorFirstname ? '' : 'First Name'}
                 </span>
               </label>
               {errorFirstname && (
@@ -80,8 +79,7 @@ const App = () => {
                   errorLastname ? 'error' : ''
                 }`}
                 autoComplete="off"
-                // required
-                placeholder="Last Name"
+                required
                 onChange={(e) => setLastname(e.target.value)}
               />
               <label
@@ -89,7 +87,7 @@ const App = () => {
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
-                  Last Name
+                  {errorLastname ? '' : 'Last Name'}
                 </span>
               </label>
               {errorLastname && (
@@ -110,8 +108,7 @@ const App = () => {
                   errorEmail ? 'error' : ''
                 }`}
                 autoComplete="off"
-                // required
-                placeholder="Email Address"
+                required
                 onChange={(e) => setEmail(e.target.value)}
               />
               <label
@@ -119,7 +116,7 @@ const App = () => {
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
-                  Email Address
+                  {errorEmail ? '' : 'Email Address'}
                 </span>
               </label>
               {errorEmail && (
@@ -142,8 +139,7 @@ const App = () => {
                   errorPassword ? 'error' : ''
                 }`}
                 autoComplete="off"
-                // required
-                placeholder="Password"
+                required
                 onChange={(e) => setPassword(e.target.value)}
               />
               <label
@@ -151,7 +147,7 @@ const App = () => {
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
-                  Password
+                  {errorPassword ? '' : 'Password'}
                 </span>
               </label>
               {errorPassword && (

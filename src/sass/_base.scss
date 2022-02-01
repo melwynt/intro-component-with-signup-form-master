@@ -1,68 +1,70 @@
 :root {
-    --color-primary: #eb2f64;
-    --color-primary-light: #FF3366;
-    --color-primary-dark: #BA265D;
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
 
-    --color-grey-light-1: #faf9f9;
-    --color-grey-light-2: #f4f2f2;
-    --color-grey-light-3: #f0eeee;
-    --color-grey-light-4: #ccc;
-    
-    --color-grey-dark-1: #333;
-    --color-grey-dark-2: #777;
-    --color-grey-dark-3: #999;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
 
-    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --color-grey-dark-0: rgb(21, 21, 21);
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
 
-    --line: 1px solid var(--color-grey-light-2);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
-    --red: hsl(0, 100%, 74%);
-    --green: hsl(154, 59%, 51%);
-    --blue: hsl(248, 32%, 49%);
-    --top-box: #5D54A3;
+  --shadow: 0 0.8rem 0 rgba(4, 1, 1, 0.15);
+
+  --line: 1px solid var(--color-grey-light-2);
+
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --top-box: #5d54a3;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  //   outline: 1px solid red;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
 
-    background: var(--red);
-    background-image: url(../img/bg-intro-desktop.png);
-    min-height: 100vh;
+  background: var(--red);
+  background-image: url(../img/bg-intro-desktop.png);
 }
 
 main {
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    margin-top: 8rem;
+  align-items: center;
+  justify-content: center;
 
-    height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
-    display: flex;
-    width: 111rem;
-    align-items: flex-start;
+  display: flex;
+  width: 111rem;
+  align-items: flex-start;
 }
