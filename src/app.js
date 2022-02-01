@@ -1,6 +1,29 @@
 import React, { useState } from 'react';
+import iconError from './img/icon-error.svg';
+import EmailValidator from 'email-validator';
 
 const App = () => {
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const [errorFirstname, setErrorFirstname] = useState(false);
+  const [errorLastname, setErrorLastname] = useState(false);
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorPassword, setErrorPassword] = useState(false);
+
+  const submit = (event) => {
+    event.preventDefault();
+
+    firstname === '' ? setErrorFirstname(true) : setErrorFirstname(false);
+    lastname === '' ? setErrorLastname(true) : setErrorLastname(false);
+    !EmailValidator.validate(email)
+      ? setErrorEmail(true)
+      : setErrorEmail(false);
+    password === '' ? setErrorPassword(true) : setErrorPassword(false);
+  };
+
   return (
     <main>
       <div className="container">
@@ -18,97 +41,130 @@ const App = () => {
           <div className="right-panel__top-box">
             Try it free 7 days&nbsp;<span>then $20/mo. thereafter</span>
           </div>
-          <form action="" className="right-panel__form">
+          <form className="right-panel__form" onSubmit={submit}>
             <div className="right-panel__form__section">
               <input
                 type="text"
                 name="firstname"
-                id=""
-                className="right-panel__form__section__input error"
-                autocomplete="off"
-                required
+                className={`right-panel__form__section__input ${
+                  errorFirstname ? 'error' : ''
+                }`}
+                autoComplete="off"
+                // required
+                placeholder="First Name"
+                onChange={(e) => setFirstname(e.target.value)}
               />
               <label
-                for="firstname"
+                htmlFor="firstname"
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
                   First Name
                 </span>
               </label>
-              <div className="right-panel__form__section__icon-error">
-                <img src="./img/icon-error.svg" alt="" className="icon-error" />
-              </div>
+              {errorFirstname && (
+                <div className="right-panel__form__section__icon-error">
+                  <img src={iconError} alt="" className="icon-error" />
+                </div>
+              )}
             </div>
-            <div className="message-error">First Name cannot be empty</div>
+            {errorFirstname && (
+              <div className="message-error">First Name cannot be empty</div>
+            )}
+
             <div className="right-panel__form__section">
               <input
                 type="text"
                 name="lastname"
-                id=""
-                className="right-panel__form__section__input error"
-                autocomplete="off"
-                required
+                className={`right-panel__form__section__input ${
+                  errorLastname ? 'error' : ''
+                }`}
+                autoComplete="off"
+                // required
+                placeholder="Last Name"
+                onChange={(e) => setLastname(e.target.value)}
               />
               <label
-                for="firstname"
+                htmlFor="lastname"
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
                   Last Name
                 </span>
               </label>
-              <div className="right-panel__form__section__icon-error">
-                <img src="./img/icon-error.svg" alt="" className="icon-error" />
-              </div>
+              {errorLastname && (
+                <div className="right-panel__form__section__icon-error">
+                  <img src={iconError} alt="" className="icon-error" />
+                </div>
+              )}
             </div>
-            <div className="message-error">Last Name cannot be empty</div>
+            {errorLastname && (
+              <div className="message-error">Last Name cannot be empty</div>
+            )}
+
             <div className="right-panel__form__section">
               <input
                 type="text"
                 name="email"
-                id=""
-                className="right-panel__form__section__input error"
-                autocomplete="off"
-                required
+                className={`right-panel__form__section__input ${
+                  errorEmail ? 'error' : ''
+                }`}
+                autoComplete="off"
+                // required
+                placeholder="Email Address"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label
-                for="firstname"
+                htmlFor="email"
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
                   Email Address
                 </span>
               </label>
-              <div className="right-panel__form__section__icon-error">
-                <img src="./img/icon-error.svg" alt="" className="icon-error" />
-              </div>
+              {errorEmail && (
+                <div className="right-panel__form__section__icon-error">
+                  <img src={iconError} alt="" className="icon-error" />
+                </div>
+              )}
             </div>
-            <div className="message-error">Looks like this is not an email</div>
+            {errorEmail && (
+              <div className="message-error">
+                Looks like this is not an email
+              </div>
+            )}
+
             <div className="right-panel__form__section">
               <input
                 type="password"
                 name="password"
-                id=""
-                className="right-panel__form__section__input"
-                autocomplete="off"
-                required
+                className={`right-panel__form__section__input ${
+                  errorPassword ? 'error' : ''
+                }`}
+                autoComplete="off"
+                // required
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
               <label
-                for="firstname"
+                htmlFor="password"
                 className="right-panel__form__section__label"
               >
                 <span className="right-panel__form__section__label__content">
                   Password
                 </span>
               </label>
-              <div className="right-panel__form__section__icon-error">
-                <img src="./img/icon-error.svg" alt="" className="icon-error" />
-              </div>
+              {errorPassword && (
+                <div className="right-panel__form__section__icon-error">
+                  <img src={iconError} alt="" className="icon-error" />
+                </div>
+              )}
             </div>
-            <div className="message-error">Password cannot be empty</div>
+            {errorPassword && (
+              <div className="message-error">Password cannot be empty</div>
+            )}
 
-            <button className="right-panel__form__btn">
+            <button type="submit" className="right-panel__form__btn">
               Claim your free trial
             </button>
             <div className="right-panel__form__terms">
