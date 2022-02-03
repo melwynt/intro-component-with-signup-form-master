@@ -1,34 +1,57 @@
-.left-panel,
-.right-panel {
-  min-height: 55.8rem;
-}
+@use 'base';
+
 .left-panel {
   width: 49.8rem;
-  margin-right: auto;
+  margin-right: 7rem;
+
+  @media only screen and (max-width: base.$bp-medium) {
+    margin-right: 1rem;
+  }
+
+  @media only screen and (max-width: base.$bp-small-2) {
+    width: auto;
+    margin: 0;
+    text-align: center;
+  }
 
   &__title {
-    font-size: 5rem;
+    font-size: 4.9rem;
     font-weight: 700;
     line-height: 5.5rem;
-    word-spacing: -0.3rem;
     color: white;
-    margin-top: 17.4rem;
+    margin-top: 0.7rem;
+
+    @media only screen and (max-width: base.$bp-small-2) {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      font-weight: 600;
+      margin-top: -0.8rem;
+    }
   }
 
   &__description {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 500;
     color: white;
     line-height: 2.6rem;
-    margin-top: 2.9rem;
+    margin-top: 2.7rem;
     word-spacing: 0rem;
     text-align: left;
     opacity: 0.9;
+
+    @media only screen and (max-width: base.$bp-small-2) {
+      margin: 2.3rem 0 0 0;
+      text-align: center;
+    }
   }
 }
 
 .right-panel {
   width: 54rem;
+
+  @media only screen and (max-width: base.$bp-small-2) {
+    width: auto;
+  }
 
   &__top-box {
     display: flex;
@@ -43,6 +66,27 @@
     padding-top: 0.3rem;
 
     box-shadow: var(--shadow);
+
+    @media only screen and (max-width: base.$bp-small-1) {
+      flex-direction: column;
+      padding-top: 0;
+    }
+
+    @media only screen and (max-width: base.$bp-small-2) {
+      display: inline-block;
+      margin-top: 6.3rem;
+      height: 8.7rem;
+      width: 100%;
+      text-align: center;
+      padding: 2rem 6rem 0 6rem;
+
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: base.$bp-small-3) {
+      line-height: 2.6rem;
+    }
 
     span {
       font-weight: 400;
@@ -62,10 +106,22 @@
 
     box-shadow: var(--shadow);
 
+    @media only screen and (max-width: base.$bp-small-2) {
+      padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: base.$bp-small-3) {
+      padding: 2.4rem;
+    }
+
     &__section {
       position: relative;
       height: 5.6rem;
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: base.$bp-small-2) {
+        margin-bottom: 1.6rem;
+      }
 
       &__input {
         width: 100%;
@@ -113,11 +169,15 @@
 
         &__content {
           position: absolute;
-          top: 1.8rem;
-          left: 3rem;
+          top: 1.7rem;
+          left: 3.3rem;
           font-size: 1.5rem;
           font-weight: 600;
           color: var(--color-grey-dark-3);
+
+          @media only screen and (max-width: base.$bp-small-2) {
+            left: 1.9rem;
+          }
         }
       }
 
@@ -151,6 +211,13 @@
 
       height: 4.4rem;
 
+      @media only screen and (max-width: base.$bp-small-2) {
+        display: inline-block;
+        margin-top: 1rem;
+        text-align: center;
+        line-height: 2rem;
+      }
+
       span {
         color: var(--red);
         font-weight: 600;
@@ -166,7 +233,6 @@
 
       margin-top: -1.5rem;
       padding-bottom: 1.9rem;
-      padding-right: 0.2rem;
     }
   }
 }

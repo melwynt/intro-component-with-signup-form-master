@@ -39,7 +39,7 @@ const App = () => {
         </div>
         <div className="right-panel">
           <div className="right-panel__top-box">
-            Try it free 7 days&nbsp;<span>then $20/mo. thereafter</span>
+            Try it free 7 days <span>then $20/mo. thereafter</span>
           </div>
           <form className="right-panel__form" onSubmit={submit} noValidate>
             <div className="right-panel__form__section">
