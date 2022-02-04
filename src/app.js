@@ -45,7 +45,7 @@ const App = () => {
             <div className="right-panel__form__section">
               <input
                 type="text"
-                name="firstname"
+                id="firstname"
                 className={`right-panel__form__section__input ${
                   errorFirstname ? 'error' : ''
                 }`}
@@ -74,7 +74,7 @@ const App = () => {
             <div className="right-panel__form__section">
               <input
                 type="text"
-                name="lastname"
+                id="lastname"
                 className={`right-panel__form__section__input ${
                   errorLastname ? 'error' : ''
                 }`}
@@ -103,7 +103,7 @@ const App = () => {
             <div className="right-panel__form__section">
               <input
                 type="text"
-                name="email"
+                id="email"
                 className={`right-panel__form__section__input ${
                   errorEmail ? 'error' : ''
                 }`}
@@ -134,7 +134,7 @@ const App = () => {
             <div className="right-panel__form__section">
               <input
                 type="password"
-                name="password"
+                id="password"
                 className={`right-panel__form__section__input ${
                   errorPassword ? 'error' : ''
                 }`}
